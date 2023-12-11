@@ -1,0 +1,11 @@
+-----DATOS DEL CLIENTE-----
+Nombre: alv
+Apellidos : saav
+Nacimiento: 2000-03-01
+Dirección postal: En frente del KFC
+-----DATOS DEL PEDIDO-----
+Tamño de la pizza: Grande
+Jamón York: SÍ
+Champiñones: SÍ
+Pepperoni: NO
+Aceitunas: SÍ
