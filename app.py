@@ -1,7 +1,8 @@
 """ Guardar datos enviados por el usuario """
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, Response
 
 app = Flask(__name__)
+
 
 @app.route("/pizza", methods=['POST'])
 def pizza():
@@ -10,7 +11,7 @@ def pizza():
     apellidos = request.form.get("apellidos")
     nacimiento = request.form.get("nacimiento")
     direccion = request.form.get("direccion")
-    tamano = request.form.get("tamaño")
+    tamano = request.form.get("tamano")
     i1 = request.form.get("i1")
     i2 = request.form.get("i2")
     i3 = request.form.get("i3")
@@ -88,3 +89,17 @@ def guardar_pedido3(i2, i3, i4):
         file.write("Pepperoni: " +i3+ "\n")
         file.write("Aceitunas: " +i4+ "\n")
         file.close()
+
+@app.route("/checksize",methods=['POST'])
+def checksize():
+    """Comprueba disponibilidad de un tamaño de pizza."""
+    tamano = request.form.get("size")
+    if tamano == "S":
+        mensaje = " NO disponible"
+    if tamano == "M":
+        mensaje = "Disponible"
+    if tamano == "L":
+        mensaje = "Disponible"
+    if tamano == "XXL":
+        mensaje = "Disponible"
+    return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'})

@@ -1,2 +1,11 @@
-Salvador Pérez Luque
-Michael Jordan
+-----DATOS DEL CLIENTE-----
+Nombre: Salvador
+Apellidos : Pérez
+Nacimiento: 2023-12-07
+Dirección postal: Calle Margarita
+-----DATOS DEL PEDIDO-----
+Tamño de la pizza: M
+Jamón York: SÍ
+Champiñones: SÍ
+Pepperoni: NO
+Aceitunas: SÍ
