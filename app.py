@@ -96,10 +96,6 @@ def checksize():
     tamano = request.form.get("size")
     if tamano == "S":
         mensaje = " NO disponible"
-    if tamano == "M":
-        mensaje = "Disponible"
-    if tamano == "L":
-        mensaje = "Disponible"
-    if tamano == "XXL":
+    else:
         mensaje = "Disponible"
     return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'})
